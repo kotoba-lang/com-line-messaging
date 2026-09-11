@@ -47,10 +47,10 @@ callers resolve them from env/secrets.
 ## Testing
 
 ```bash
-clojure -M:test   # signature.cljc + events.cljc + client.cljc (JVM)
-clojure -M:lint
+kbb -M:test   # signature.cljc + events.cljc + client.cljc (JVM)
+kbb -M:lint
 ```
 
 `async-signature.cljs` has no JVM-runnable test here (Web Crypto isn't
-available under `clojure -M`); it's exercised by its consumer's own
+available under `kbb -M`); it's exercised by its consumer's own
 integration test (a real Cloudflare Worker webhook route).
